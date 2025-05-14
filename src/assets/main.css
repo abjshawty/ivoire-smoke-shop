@@ -1,12 +1,13 @@
 .dark-theme {
-    --primary:  #000000;
+    --primary: #000000;
     --secondary: #8E1616;
     --tertiary: #E8C999;
     --accent: #F8EEDF;
     --text: #ecf0f1;
 }
+
 .light-theme {
-    --primary: #626F47;
+    --primary: #eeeeee;
     --secondary: #A4B465;
     --tertiary: #A4B465;
     --accent: #F0BB78;
@@ -24,4 +25,3 @@ body {
     display: flex;
     flex-direction: column;
 }
-

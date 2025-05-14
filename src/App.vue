@@ -9,7 +9,12 @@ defaultTheme();
   <header>
     <NavBar />
   </header>
+  <Suspense>
   <RouterView class="view"/>
+  <template #fallback>
+            <h1>Todo</h1>
+        </template>
+    </Suspense>
 </template>
 
 <style scoped>

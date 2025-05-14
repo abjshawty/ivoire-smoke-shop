@@ -1,10 +1,11 @@
 <script setup lang="ts">
 import ProductWidget from './ProductWidget.vue'
+const props = defineProps(['data'])
 </script>
 <template>
     
         <div class="product-grid">
-            <ProductWidget v-for="product in 64" :key="product" :product="{name: 'Product Name', price: 100, originalPrice: 150, inStock: true, isNew: true, imageUrl: '@/assets/images/chicha.jpg'}"/>
+            <ProductWidget v-for="item in props.data" :key="item.id" :name="item.name" :price="item.price" inStock=true, :cover="item.cover"/>
         </div>
 </template>
 
