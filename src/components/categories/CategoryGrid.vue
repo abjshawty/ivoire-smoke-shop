@@ -1,14 +1,13 @@
 <script setup lang="ts">
 import {ref} from "vue"
 import CategoryWidget from './CategoryWidget.vue'
-const items = ref([
-    { name: 'Category 1', cover: "chicha.jpg" },
-    { name: 'Category 2', cover: "cigar.jpeg" }
-    ])
+const data = defineProps(['data'])
+const items =data.data
+console.log(items)
 </script>
 <template>
         <div class="category-grid">
-            <CategoryWidget v-for="item in items" :key="item.name" :name="item.name" :cover="item.cover"/>
+            <CategoryWidget v-for="item in items" :key="item.id" :name="item.name" :cover="item.cover"/>
         </div>
 </template>
 

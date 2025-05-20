@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import CategoryGrid from '@/components/categories/CategoryGrid.vue'
+import { api } from '@/assets/data/api'
+import axios from "axios"
+const categories = await axios.get(api + "/categories")
 </script>
 
 <template>
@@ -8,7 +11,7 @@ import CategoryGrid from '@/components/categories/CategoryGrid.vue'
     <div>
       <!-- Categories -->
       <div>
-        <CategoryGrid />
+        <CategoryGrid :data="categories.data.data" />
       </div>
     </div>
   </main>

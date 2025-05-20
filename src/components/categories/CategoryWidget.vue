@@ -1,14 +1,11 @@
 <script setup lang="ts">
 const props = defineProps(['name', 'cover'])
-function getImageUrl() {
-    return new URL(`../../assets/images/categories/${props.cover}`, import.meta.url)
-}
 </script>
 
 <template>
     <!-- Todo: Eliminate gap -->
     <div class="category-widget" @click="$router.push('/category/1')">
-        <img :src="getImageUrl()" alt="Category Cover">
+        <img :src="props.cover" alt="Category Cover">
         <div class="category-widget-text">
             <h3>{{ props.name }}</h3>
         </div>

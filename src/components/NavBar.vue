@@ -6,7 +6,8 @@ import { RouterLink } from 'vue-router'
     <div class="nav">
         <div class="logo">
             <RouterLink to="/">
-                <img src="@/assets/images/logo.avif" alt="Logo">
+                <!-- <img src="@/assets/images/logo.avif" alt="Logo"> -->
+                <img src="https://ik.imagekit.io/abjshawty/ivoire-smoke-shop/logo.avif" alt="Logo">
             </RouterLink>
         </div>
         <div>
